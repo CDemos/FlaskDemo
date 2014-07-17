@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>{{ web_title }}</title>
+</head>
+<body>
+<header>
+    <h2>{{ title }}</h2>
+    <p>{{content}}</p>
+    {% if show %}
+        <h2>time to show!</h2>
+    {% else %}
+        <h2>you can't see me.</h2>
+    {% endif %}
+    <ol>
+        {% for user in users %}
+            <li><a href="{{ user.url }}">{{ user.username }}</a></li>
+        {% endfor %}
+    </ol>
+</header>
+</body>
+</html>
