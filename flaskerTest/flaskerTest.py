@@ -54,5 +54,7 @@ class FlaskerTestCase(unittest.TestCase):
         assert 'No entries here so far' not in rv.data
         assert 'Test' in rv.data
         assert 'this is content' in rv.data
+
+
 if __name__ == '__main__':
     unittest.main()
