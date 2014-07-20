@@ -4,7 +4,7 @@ __author__ = 'Jayin Ton'
 
 # todo :测试template~
 
-from flask import Flask
+from flask import Flask, render_template
 from controller.UserController import user_controller
 
 app = Flask(__name__)
@@ -17,7 +17,7 @@ app.register_blueprint(user_controller)
 
 @app.route('/')
 def index():
-    return 'welcome'
+    return render_template('index.html', title='Home Page')
 
 
 if __name__ == '__main__':
