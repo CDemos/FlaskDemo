@@ -18,7 +18,6 @@ app.secret_key = 'A0Zr98j/3yX R~XHH!jmN]LWX/,?RT'
 def index():
     print session.__dict__
     print session
-    print "??"
     if 'username' in session:
         return 'Logged in as %s' % session['username']
     return 'You are not logged in'
@@ -35,6 +34,11 @@ def login():
             <p><input type=submit value=Login>
         </form>
     '''
+@app.route('/see',methods=['GET'])
+def see():
+    print session.__dict__
+    print session
+    return "see"
 
 
 @app.route('/logout')
